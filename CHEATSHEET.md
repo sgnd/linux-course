@@ -72,3 +72,19 @@ This cheatsheet is a quick reference for common Bash commands on Ubuntu Server. 
 - `echo $<variable>`: Display the value of `<variable>`
 - `export <variable>`: Mark `<variable>` for export to child processes
 - `unset <variable>`: Remove the value of `<variable>`
+
+## Permissions
+- `chmod <mode> <file>`: Change the permissions of `<file>` to `<mode>`
+  - `<mode>` can be specified as a numerical value (e.g. `644`) or as a combination of symbolic permissions (e.g. `u+x,g+r`)
+  - `u`: user (owner)
+  - `g`: group
+  - `o`: other (all users)
+  - `+`: add permission
+  - `-`: remove permission
+  - `r`: read
+  - `w`: write
+  - `x`: execute
+- `chown <user>:<group> <file>`: Change the owner and group of `<file>` to `<user>` and `<group>`, respectively
+- `ls -l <file>`: Display the permissions and ownership of `<file>`
+- `umask`: Display the default permissions for newly created files
+- `umask <mask>`: Set the default permissions for newly created files to `<mask>`
